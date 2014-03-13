@@ -1,0 +1,52 @@
+@import 'mixins'
+
+#border
+  width 150px
+  height 150px
+  position absolute
+  z-index 9999
+  overflow hidden
+  &.right
+    right 0
+  &.left
+    left 0
+  &.top
+    top 0
+    &.left
+      #banner
+        transform rotate(-45deg) translateY(-20px)
+    &.right
+      #banner
+        transform rotate(45deg) translateY(-20px)
+  &.bottom
+    bottom 0
+    &.right
+      #banner
+        transform rotate(-45deg) translateY(20px)
+    &.left
+      #banner
+        transform rotate(45deg) translateY(20px)
+
+#banner
+  width 210px
+  height 24px
+  position absolute
+  top 63px
+  left -30px
+  display flex
+  justify-content center
+  align-items center
+  padding 3px
+  alinear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15))
+  box-shadow 0 2px 3px 0 rgba(0, 0, 0, 0.5)
+
+#message
+  width 100%
+  color white
+  text-align center
+  text-shadow 0 -1px rgba(0, 0, 0, 0.5)
+  border-width 1px 0
+  border-style dotted
+  border-color #fff
+  border-color rgba(255, 255, 255, 0.7)
+  padding 2px 0
